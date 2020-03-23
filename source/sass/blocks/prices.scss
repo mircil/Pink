@@ -1,0 +1,279 @@
+.prices {
+  background-image: url("../img/bg-triangle-white.svg");
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+
+  padding-bottom: 46px;
+  margin-bottom: 42px;
+}
+
+.prices__container {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.prices__table {
+  position: relative;
+  width: 259.1%;
+  left: 50%;
+  margin-top: 126px;
+  margin-bottom: 40px;
+  border-collapse: collapse;
+  transform: translateX(-50%);
+}
+
+.table__title--empty {
+  display: none;
+}
+
+.table__item,
+.table__description {
+  border: 2px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.table__description {
+  display: none;
+}
+
+.table__title {
+  position: relative;
+  width: 276px;
+  padding: 20px;
+  background-color: #283645;
+  color: #fff;
+  background-clip: padding-box;
+  box-sizing: border-box;
+
+  &:nth-child(2) {
+    border-right: 2px solid transparent;
+  }
+
+  &:last-child {
+    border-left: 2px solid transparent;
+  }
+
+  &--hit::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background-image: url("../img/bg-hit.svg");
+    background-repeat: no-repeat;
+  }
+
+  &--hit::after {
+    content: "Хит";
+    position: absolute;
+    top: 15px;
+    left: 8px;
+    transform: rotate(-45deg);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+}
+
+.table__name {
+  margin-top: -4px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 31px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.table__price {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 31px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.table__item {
+  position: relative;
+  height: 61px;
+  padding: 0 22px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31px;
+  color: #283645;
+  text-transform: uppercase;
+  background-clip: padding-box;
+  border-top: none;
+  box-sizing: border-box;
+}
+
+.table__feature {
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 27px;
+  top: 17px;
+  right: 14px;
+  font-size: 0;
+
+  &--yes {
+    background-image: url("../img/icon-yes.svg");
+    background-repeat: no-repeat;
+    background-size: 31px 23px;
+  }
+
+  &--no {
+    top: 14px;
+    right: 13px;
+    background-image: url("../img/icon-no.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.prices__slider-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 62px;
+  margin: 0 auto;
+}
+
+.prices .slider-controls__label {
+  border: 3px solid #f2f2f2;
+}
+
+@media (min-width: $tablet-width) {
+  .prices {
+    // background: linear-gradient(176deg, #ffffff 15%, #f2f2f2 10%);
+    margin-bottom: 46px;
+    padding-bottom: 5px;
+  }
+
+  .prices__table {
+    width: 616px;
+    margin: 0 auto;
+    margin-top: 110px;
+    margin-bottom: 62px;
+    padding: 0 20px;
+    left: 0;
+    transform: none;
+  }
+
+  .table__title--empty {
+    display: block;
+  }
+
+  .table__description {
+    display: table-cell;
+  }
+
+  .table__title {
+    width: 25%;
+    padding: 17px 0 12px;
+
+    &--hit::before {
+      background-size: 61px 61px;
+    }
+
+    &--hit::after {
+      top: 7px;
+      left: 7px;
+    }
+  }
+
+  .table__name {
+    font-size: 16px;
+    line-height: 29px;
+  }
+
+  .table__description {
+    padding-left: 13px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #283645;
+  }
+
+  .table__price {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .table__item {
+    height: 47px;
+  }
+
+  .table__feature-name {
+    display: none;
+  }
+
+  .table__feature {
+    position: relative;
+    top: 2px;
+    left: 3px;
+    margin: auto;
+  }
+
+  .prices__slider-controls {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .prices {
+    padding-top: 40px;
+    padding-bottom: 32px;
+    margin-bottom: 64px;
+    // background: linear-gradient(176deg, #ffffff 20.5%, #f2f2f2 10%);
+    background-size: 100%;
+  }
+
+  .prices__table {
+    width: 938px;
+    margin-top: 115px;
+  }
+
+  .table__title {
+    height: 98px;
+    padding-top: 7px;
+
+    &--hit::before {
+      left: 0;
+      background-size: 74px 73px;
+    }
+
+    &--hit::after {
+      top: 15px;
+      left: 10px;
+    }
+  }
+
+  .table__name {
+    font-size: 18px;
+    line-height: 38px;
+  }
+
+  .table__price {
+    font-size: 24px;
+  }
+
+  .table__description {
+    padding-left: 20px;
+    font-size: 18px;
+  }
+
+  .table__item {
+    height: 61px;
+  }
+
+  .table__feature {
+    top: 2px;
+    left: 1px;
+  }
+}

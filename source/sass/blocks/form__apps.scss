@@ -1,0 +1,142 @@
+.apps {
+  background-color: #dedfe1;
+}
+
+.contest-form__apps {
+  width: 320px;
+  margin: 0 auto;
+  margin-top: 38px;
+  border: 0;
+}
+
+.apps__title {
+  max-width: 220px;
+  margin: 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d22856;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.apps__list {
+  margin-top: 39px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.apps__item {
+  padding-bottom: 45px
+}
+
+.apps__label {
+  position: relative;
+  display: block;
+  margin-left: 70px;
+  color: #283645;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.apps__radio + .apps__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-top: -4px;
+  margin-left: -70px;
+  border: 2px solid #e5e5e5;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.apps__radio + .apps__label:hover::before,
+.apps__radio:focus + .apps__label::before {
+  border-color: #283645;
+}
+
+.apps__radio + .apps__label:active::before {
+  border-color: #d22856;
+}
+
+.apps__radio:checked + .apps__label::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  left: -58px;
+  width: 15px;
+  height: 15px;
+  color: #d22856;
+  background-color: #d22856;
+  border-radius: 50%;
+}
+
+@media (min-width: $tablet-width) {
+  .apps {
+    background-color: #fff;
+  }
+
+  .contest-form__apps {
+    width: 616px;
+    margin-top: 33px;
+    padding-bottom: 0;
+    border: 2px solid #e5e5e5;
+  }
+
+  .apps__title {
+    max-width: 450px;
+    padding-right: 26px;
+    padding-left: 26px;
+  }
+
+  .apps__list {
+    margin: 0;
+    margin-top: 48px;
+    margin-left: 52px;
+    padding-bottom: 12px;
+  }
+
+  .apps__label {
+    margin-left: 65px;
+  }
+
+  .apps__radio + .apps__label::before {
+    margin-left: -58px;
+  }
+
+  .apps__radio:checked + .apps__label::after {
+    top: 8px;
+    left: -46px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .apps {
+    padding-top: 2px;
+  }
+
+  .contest-form__apps {
+    width: 431px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .apps__title {
+    padding-top: 3px;
+  }
+
+  .apps__list {
+    margin-top: 50px;
+    margin-left: 42px;
+    padding-bottom: 11px;
+  }
+
+  .apps__label {
+    margin-left: 93px;
+  }
+}

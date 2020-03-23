@@ -1,0 +1,152 @@
+.achievements {
+  background-color: #dedfe1;
+}
+
+.contest-form__achievements {
+  width: 320px;
+  margin: 0 auto;
+  border: 0;
+}
+
+.achievements__title {
+  max-width: 220px;
+  margin: 0 auto;
+  padding-top: 38px;
+  padding-bottom: 43px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #d22856;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.achievements__list {
+  margin-right: 22px;
+  margin-left: 22px;
+  padding-bottom: 37px;
+}
+
+.achievements__item {
+  padding-bottom: 52px;
+
+  &:last-child {
+    padding-bottom: 10px;
+  }
+}
+
+.achievements__label {
+  position: relative;
+  display: block;
+  margin-left: 68px;
+  color: #283645;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.checkbox + .achievements__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 35px;
+  height: 35px;
+  margin-top: -5px;
+  margin-left: -70px;
+  border: 2px solid #e5e5e5;
+  background-color: #fff;
+}
+
+.checkbox + .achievements__label:hover::before,
+.checkbox:focus + .achievements__label::before {
+  border-color: #283645;
+}
+
+.checkbox + .achievements__label:active::before {
+  border-color: #d22856;
+}
+
+.checkbox:checked + .achievements__label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-image: url("../img/icon-check.svg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position-x: center;
+  background-position-y: center;
+
+  &:hover::before {
+    border-color: #283645;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .achievements {
+    background-color: #fff;
+  }
+
+  .contest-form__achievements {
+    width: 616px;
+    margin-top: 2px;
+    padding-top: 3px;
+    padding-bottom: 16px;
+    border: 2px solid #e5e5e5;
+  }
+
+  .achievements__title {
+    max-width: 450px;
+    padding-top: 46px;
+    padding-right: 32px;
+    padding-bottom: 48px;
+    padding-left: 32px;
+  }
+
+  .achievements__list {
+    margin-left: 0;
+    padding-bottom: 43px;
+  }
+
+  .achievements__item {
+    padding-bottom: 52px;
+  }
+
+  .achievements__label {
+    margin-left: 117px;
+  }
+
+  .checkbox + .achievements__label::before {
+    margin-top: -4px;
+    margin-left: -59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contest-form__achievements {
+    width: 936px;
+    max-height: 282px;
+    padding: 0;
+  }
+
+  .achievements__title {
+    padding-bottom: 44px;
+  }
+
+  .achievements__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 876px;
+    height: 228px;
+    margin-top: 4px;
+  }
+
+  .achievements__item {
+    padding-left: 0;
+  }
+
+  .achievements__label {
+    margin-left: 116px;
+  }
+}

@@ -1,0 +1,35 @@
+html {
+  box-sizing: border-box;
+
+  &::before,
+  &::after {
+    box-sizing: inherit;
+  }
+}
+
+body {
+  font-family: "Open Sans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  background-color: #fff;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.list-style-reset {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.button-reset {
+  border: none;
+  background-color: transparent;
+}
+
+.text-reset {
+  margin: 0;
+  padding: 0;
+}

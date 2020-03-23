@@ -1,0 +1,169 @@
+.page-footer {
+  display: none;
+}
+
+.page-footer__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__logo {
+  &:hover,
+  &:focus {
+    fill: #d22856;
+  }
+
+  &:active {
+    fill: #283645;
+    opacity: 0.3;
+  }
+}
+
+.page-footer__logo-image--mobile {
+  display: none;
+}
+
+.page-footer__socials {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.socials__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 177px;
+}
+
+.socials__link {
+  display: inline-block;
+  vertical-align: middle;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  fill: #d22856;
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    border: 3px solid #283645;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__icon {
+  &--twitter {
+    padding-top: 15px;
+  }
+
+  &--facebook {
+    padding-top: 12px;
+  }
+
+  &--youtube {
+    padding-top: 15px;
+  }
+}
+
+.page-footer__copyright {
+  margin-top: -5px;
+}
+
+.copyright__link {
+  position: relative;
+  top: 13px;
+  fill: #d22856;
+
+  &:hover,
+  &:focus {
+    fill: #283645;
+  }
+
+  &:active {
+    fill: #283645;
+    opacity: 0.3;
+  }
+}
+
+.copyright__title {
+  font-size: 14px;
+  margin-right: 11px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    display: block;
+  }
+
+  .page-footer__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 620px;
+    margin: 0 auto;
+    padding-top: 5px;
+  }
+
+  .page-footer__logo-image--mobile {
+    display: block;
+  }
+
+  .page-footer__logo-image--desktop {
+    display: none;
+  }
+
+  .page-footer__socials {
+    margin-top: 31px;
+    margin-right: 16px;
+    margin-bottom: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-footer__container {
+    width: 945px;
+    min-height: 188px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .page-footer__logo {
+    margin-top: -6px;
+    margin-left: 3px;
+  }
+
+  .page-footer__socials {
+    margin-top: 29px;
+    margin-right: -6px;
+    margin-bottom: 19px;
+  }
+
+  .page-footer__copyright {
+    margin-top: -8px
+  }
+
+  .copyright__title {
+    font-size: 18px;
+    margin-right: 12px;
+  }
+
+  .copyright__link {
+    top: 14px;
+    left: -3px;
+  }
+}
